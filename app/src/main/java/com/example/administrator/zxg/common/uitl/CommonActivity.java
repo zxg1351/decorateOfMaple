@@ -12,5 +12,8 @@ public class CommonActivity  extends Activity {
         super.onCreate(savedInstanceState);
 
 
+
+
+
     }
 }
