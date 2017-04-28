@@ -4,4 +4,8 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="test_size">32sp</dimen>
     <dimen name="test_size_one">24sp</dimen>
+
+    <dimen name="margin_left20">20px</dimen>
+    <dimen name="margin_right">20px</dimen>
+
 </resources>
