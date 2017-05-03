@@ -25,7 +25,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.WelcomeActivity">
+        <activity android:name=".ui.MainActivity2">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -65,6 +65,7 @@
         <activity android:name=".ui.ForgetPasswordActivity"
             android:theme="@style/themeSetting"></activity>
         <activity android:name=".ui.SystemSetActivity"></activity>
+
     </application>
 
 </manifest>
