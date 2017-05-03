@@ -5,4 +5,9 @@
     <string name="input_userName_length">用户名输入长度过短</string>
     <string name="input_userPassword">请输入用户密码</string>
     <string name="input_userPassword_length">用户密码输入长度过短</string>
+    <string name="changePassword">修改密码</string>
+    <string name="commit_success">提交成功</string>
+    <string name="input_mobile">请输入手机号码</string>
+    <string name="verificationCode">请输入验证码</string>
+    <string name="input_newPassword">请输入新密码</string>
 </resources>
