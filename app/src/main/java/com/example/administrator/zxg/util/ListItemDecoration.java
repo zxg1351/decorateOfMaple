@@ -1,14 +1,11 @@
-package com.example.administrator.zxg.common.uitl;
+package com.example.administrator.zxg.util;
 
 import android.content.Context;
 import android.graphics.Canvas;
-import android.graphics.Color;
-import android.graphics.Paint;
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.TypedValue;
 import android.view.View;
 
 import com.example.administrator.zxg.R;

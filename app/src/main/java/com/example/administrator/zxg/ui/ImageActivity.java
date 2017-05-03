@@ -11,17 +11,14 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
-import android.provider.Settings;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.example.administrator.zxg.MainActivity;
 import com.example.administrator.zxg.R;
-import com.example.administrator.zxg.common.uitl.BitmapUtil;
-import com.example.administrator.zxg.common.uitl.CommonActivity;
+import com.example.administrator.zxg.util.BitmapUtil;
+import com.example.administrator.zxg.common.CommonActivity;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;

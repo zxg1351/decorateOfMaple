@@ -8,7 +8,7 @@ import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
 import com.example.administrator.zxg.R;
-import com.example.administrator.zxg.common.uitl.CommonActivity;
+import com.example.administrator.zxg.common.CommonActivity;
 
 
 

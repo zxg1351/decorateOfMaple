@@ -3,13 +3,12 @@ package com.example.administrator.zxg.ui;
 import android.os.Bundle;
 import android.os.Environment;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.example.administrator.zxg.R;
-import com.example.administrator.zxg.common.uitl.CommonActivity;
+import com.example.administrator.zxg.common.CommonActivity;
 
 import java.io.File;
 

@@ -2,13 +2,12 @@ package com.example.administrator.zxg.ui;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
 import com.example.administrator.zxg.R;
 import com.example.administrator.zxg.adapter.HomeAdapter;
-import com.example.administrator.zxg.common.uitl.CommonActivity;
+import com.example.administrator.zxg.common.CommonActivity;
 
 import java.util.ArrayList;
 import java.util.List;

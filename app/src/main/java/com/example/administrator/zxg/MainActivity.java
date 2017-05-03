@@ -1,26 +1,16 @@
 package com.example.administrator.zxg;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.administrator.zxg.adapter.HomeAdapter;
-import com.example.administrator.zxg.common.uitl.CommonActivity;
-import com.example.administrator.zxg.common.uitl.ListItemDecoration;
+import com.example.administrator.zxg.common.CommonActivity;
+import com.example.administrator.zxg.util.ListItemDecoration;
 import com.example.administrator.zxg.ui.ContactListActivity;
-import com.example.administrator.zxg.ui.GridLayoutActivity;
-import com.example.administrator.zxg.ui.ImageActivity;
-import com.example.administrator.zxg.ui.SecondActivity;
-import com.example.administrator.zxg.ui.StaggeredActivity;
-import com.example.administrator.zxg.ui.StaggeredGridLayoutActivity;
 import com.example.administrator.zxg.ui.ThreeActivity;
 
 import java.util.ArrayList;

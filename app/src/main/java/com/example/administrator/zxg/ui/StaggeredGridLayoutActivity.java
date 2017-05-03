@@ -4,8 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
@@ -16,7 +14,7 @@ import android.widget.Toast;
 
 import com.example.administrator.zxg.R;
 import com.example.administrator.zxg.adapter.StaggeredHomeAdapter;
-import com.example.administrator.zxg.common.uitl.CommonActivity;
+import com.example.administrator.zxg.common.CommonActivity;
 
 public class StaggeredGridLayoutActivity extends CommonActivity
 {

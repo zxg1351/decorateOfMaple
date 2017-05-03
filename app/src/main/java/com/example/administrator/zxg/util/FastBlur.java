@@ -1,6 +1,4 @@
-package com.example.administrator.zxg.common.uitl;
-
-import android.graphics.Bitmap;
+package com.example.administrator.zxg.util;
 
 /**
  * Created by Administrator on 2016/9/27.

@@ -7,7 +7,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.example.administrator.zxg.R;
-import com.example.administrator.zxg.common.uitl.CommonActivity;
 
 /**
  * Created by Administratlor on 2016/8/30.

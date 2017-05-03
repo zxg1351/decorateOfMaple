@@ -1,4 +1,4 @@
-package com.example.administrator.zxg.common.uitl;
+package com.example.administrator.zxg.util;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;

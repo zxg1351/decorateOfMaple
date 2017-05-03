@@ -5,7 +5,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.example.administrator.zxg.R;
-import com.example.administrator.zxg.common.uitl.CommonActivity;
+import com.example.administrator.zxg.common.CommonActivity;
 
 /**
  * Created by Administrator on 2016/10/5.

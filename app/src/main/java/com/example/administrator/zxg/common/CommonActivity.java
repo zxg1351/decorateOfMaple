@@ -1,4 +1,4 @@
-package com.example.administrator.zxg.common.uitl;
+package com.example.administrator.zxg.common;
 
 import android.app.Activity;
 import android.os.Bundle;

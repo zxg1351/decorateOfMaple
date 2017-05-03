@@ -4,16 +4,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
-import com.example.administrator.zxg.MainActivity;
 import com.example.administrator.zxg.R;
 import com.example.administrator.zxg.adapter.MyPagerAdapter;
-import com.example.administrator.zxg.common.uitl.CommonActivity;
+import com.example.administrator.zxg.common.CommonActivity;
 
 import java.util.ArrayList;
 import java.util.List;

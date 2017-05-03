@@ -2,15 +2,12 @@ package com.example.administrator.zxg.ui;
 
 import android.os.Bundle;
 import android.os.PersistableBundle;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 
-import com.example.administrator.zxg.MainActivity;
 import com.example.administrator.zxg.R;
-import com.example.administrator.zxg.adapter.HomeAdapter;
 import com.example.administrator.zxg.adapter.StaggeredHomeAdapter;
-import com.example.administrator.zxg.common.uitl.CommonActivity;
+import com.example.administrator.zxg.common.CommonActivity;
 
 import java.util.ArrayList;
 import java.util.List;
