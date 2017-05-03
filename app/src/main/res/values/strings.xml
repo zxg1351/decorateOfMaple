@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">枫之家</string>
+    <string name="title_login">登录</string>
+    <string name="input_userName">请输入用户名</string>
+    <string name="input_userName_length">用户名输入长度过短</string>
+    <string name="input_userPassword">请输入用户密码</string>
+    <string name="input_userPassword_length">用户密码输入长度过短</string>
 </resources>
