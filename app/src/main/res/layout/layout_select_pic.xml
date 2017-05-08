@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/rootLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:background="@android:color/transparent"
+                android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/dialog_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_take_photo"
+            android:layout_width="fill_parent"
+            android:layout_height="100px"
+            android:layout_marginLeft="20px"
+            android:layout_marginRight="20px"
+            android:background="@null"
+            android:text="選擇視頻"
+            android:textColor="@color/black"
+            android:textSize="@dimen/test_size"
+            android:textStyle="bold"/>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/line"/>
+
+        <Button
+            android:id="@+id/btn_pick_photo"
+            android:layout_width="fill_parent"
+            android:layout_height="100px"
+            android:layout_marginLeft="20px"
+            android:layout_marginRight="20px"
+            android:background="@null"
+            android:text="選擇照片"
+            android:textColor="@color/black"
+            android:textSize="@dimen/test_size"
+            android:textStyle="bold"/>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/page_bg"/>
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="fill_parent"
+            android:layout_height="100px"
+            android:layout_marginLeft="20px"
+            android:layout_marginRight="20px"
+            android:background="@null"
+            android:text="取消"
+            android:textColor="@color/black"
+            android:textSize="@dimen/test_size"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+</RelativeLayout>

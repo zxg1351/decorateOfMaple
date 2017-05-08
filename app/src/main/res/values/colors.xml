@@ -12,7 +12,8 @@
     <color name="textblack1">#141414</color>
     <color name="textblack2">#838383</color>
     <color name="textblack3">#d2d2d2</color>
-
+    <color name="titel_color">#1A9DF4</color>
+    <color name="page_bg">#EFF4F7</color>
     <color name="black"> #000000</color>
     <color name="white"> #FFFFFF</color>
     <color name="red"> #FF0000</color>

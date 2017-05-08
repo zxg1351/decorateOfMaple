@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.example.administrator.zxg.R;
+import com.example.administrator.zxg.imageandvideo.SelectImageAndVideoActivity;
 
 /**
  * Created by Administratlor on 2016/8/30.
@@ -34,7 +35,11 @@ public class LayoutActivity extends AppCompatActivity {
         Intent intent = new Intent(LayoutActivity.this, ImageActivity.class);
         startActivity(intent);
     }
+    public void selectImageAndVideo(View view){
+        Intent intent = new Intent(LayoutActivity.this, SelectImageAndVideoActivity.class);
+        startActivity(intent);
 
+    }
     //recycle
     public void recycle(View view) {
         Intent intent = new Intent(LayoutActivity.this, StaggeredGridLayoutActivity.class);

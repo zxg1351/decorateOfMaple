@@ -4,18 +4,28 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent">
 
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:textColor="@color/colorAccent"
+        android:layout_height="match_parent"
         android:onClick="onWelcome"
-        android:text="起始页"
-        />
-    <ImageView
-        android:id="@+id/iv_image"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        />
+        >
+        <ImageView
+            android:id="@+id/iv_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+        <TextView
+            android:id="@+id/tv_welcome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/colorAccent"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:text="起始页"
+            />
+
+    </RelativeLayout>
+
 
 </LinearLayout>

@@ -32,9 +32,9 @@ public class WelcomeActivity extends CommonActivity {
     public void init() {
         iv_image = (ImageView) findViewById(R.id.iv_image);
      //   String url = "http://www.qq745.com/uploads/allimg/141106/1-141106153Q5.png";
-        String url = "http://img2.3lian.com/2014/f6/173/d/51.jpg";
+//        String url = "http://img2.3lian.com/2014/f6/173/d/51.jpg";
         Glide.with(this).
-                load(url).
+                load(R.mipmap.bg_start).
 //                asBitmap(). //强制处理为bitmap
         into(iv_image);//显示到目标View中
     }
