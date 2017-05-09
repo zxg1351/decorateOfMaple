@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/tdcq"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_head_text"></include>
+    <LinearLayout
+        android:id="@+id/ll_background"
+        android:layout_width="574px"
+        android:layout_height="150px"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="350px"
+        android:orientation="vertical"
+        android:background="@mipmap/change_password_et">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/iv_01"
+                android:layout_width="28px"
+                android:layout_height="34px"
+                android:layout_marginLeft="26px"
+                android:layout_marginRight="28px"
+                android:layout_marginTop="20px"
+                android:src="@mipmap/user" />
+
+            <EditText
+                android:id="@+id/et_userName"
+                android:layout_width="476px"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:layout_marginTop="20px"
+                android:background="@drawable/algin_edit"
+                android:hint="手机号/邮箱"
+                android:text="maple1351"
+                android:textColor="@color/black"
+                android:textColorHint="@color/textColor"
+                android:textSize="20sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/grey_line"></LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/iv_02"
+                android:layout_width="28px"
+                android:layout_height="34px"
+                android:layout_marginLeft="26px"
+                android:layout_marginRight="28px"
+                android:layout_gravity="center"
+                android:src="@mipmap/password" />
+            <EditText
+                android:id="@+id/et_password"
+                android:layout_width="476px"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/algin_edit"
+                android:hint="登录密码"
+                android:inputType="textPassword"
+                android:text="15524765003"
+                android:textColor="@color/black"
+                android:textColorHint="@color/textColor"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/bt_01"
+        android:layout_width="570px"
+        android:layout_height="74px"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="25px"
+        android:background="@color/coffee"
+        android:gravity="center"
+        android:onClick="login"
+        android:text="登录"
+        android:textColor="@color/white"
+        android:textSize="@dimen/test_size_one" />
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center_horizontal|bottom">
+
+        <TextView
+            android:id="@+id/bt_02"
+            android:layout_width="134px"
+            android:layout_height="54px"
+            android:layout_marginBottom="@dimen/test_size"
+            android:background="@color/coffee"
+            android:gravity="center"
+            android:onClick="registered"
+            android:text="注册"
+            android:textColor="@color/black"
+            android:textSize="@dimen/test_size_one" />
+    </LinearLayout>
+
+
+</LinearLayout>

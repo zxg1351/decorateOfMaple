@@ -6,6 +6,7 @@
     <color name="color_item_press">#ffff0000</color>
     <color name="color_item_normal">#44ff0000</color>
     <color name="line">#d7d7d7</color>
+    <color name="grey_line">#C7C7C7</color>
     <!-- 背景色 -->
     <color name="bg_color">#f0f0f0</color>
     <!-- 文字颜色 -->
@@ -13,6 +14,8 @@
     <color name="textblack2">#838383</color>
     <color name="textblack3">#d2d2d2</color>
     <color name="titel_color">#1A9DF4</color>
+    <color name="textColor">#e5e5e6</color>
+    <color name="text_orange">#f7743c</color>
     <color name="page_bg">#EFF4F7</color>
     <color name="black"> #000000</color>
     <color name="white"> #FFFFFF</color>
