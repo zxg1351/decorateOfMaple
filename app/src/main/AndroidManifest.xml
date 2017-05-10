@@ -67,9 +67,10 @@
         <activity android:name=".ui.Login.ForgetPasswordActivity"
             android:theme="@style/themeSetting"></activity>
         <activity android:name=".ui.SystemSetActivity"
-            android:theme="@style/themeSetting"
-            ></activity>
+            android:theme="@style/themeSetting"></activity>
         <activity android:name=".ui.MainActivity2"
+            android:theme="@style/themeSetting"></activity>
+        <activity android:name=".ui.Login.RegisterActivity"
             android:theme="@style/themeSetting"></activity>
     </application>
 

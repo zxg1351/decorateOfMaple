@@ -69,9 +69,22 @@ public class LoginActivity extends CommonActivity {
 
     }
 
-
+    /**
+     * 注册
+     * @param view
+     */
     public void registered(View view){
-        Intent intent = new Intent(LoginActivity.this, ForgetPasswordActivity.class);
+        Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * 忘记密码
+     * @param view
+     */
+    public void  forgetPassword(View view){
+
+        Intent intent = new Intent(LoginActivity.this,ForgetPasswordActivity.class);
         startActivity(intent);
     }
 }

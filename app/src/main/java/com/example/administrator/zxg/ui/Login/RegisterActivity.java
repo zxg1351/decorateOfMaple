@@ -24,6 +24,7 @@ public class RegisterActivity extends CommonActivity {
 
     private void initView() {
         tv_title =  (TextView) findViewById(R.id.tv_title);
+        tv_title.setText("注册");
 
     }
 
