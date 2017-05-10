@@ -13,7 +13,6 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"></uses-permission>
     <uses-feature android:name="android.hardware.camera"/>
     <uses-feature android:name="android.hardware.camera.autofocus"/>
-
     <uses-permission android:name="android.permission.CAMERA"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
 
@@ -40,7 +39,7 @@
         <activity android:name=".ui.ThreeActivity"
             android:theme="@style/themeSetting"></activity>
         <activity android:name=".ui.ContactListActivity"
-
+            android:theme="@style/themeSetting"
             ></activity>
         <activity android:name=".ui.ImageActivity"
             android:theme="@style/themeSetting"

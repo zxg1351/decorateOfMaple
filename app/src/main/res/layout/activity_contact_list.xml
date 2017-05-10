@@ -3,6 +3,9 @@
               android:orientation="vertical"
               android:layout_width="match_parent"
               android:layout_height="match_parent">
+        <include layout="@layout/include_head_text"></include>
+        <include layout="@layout/include_search_bar"></include>
+
         <ListView
             android:id="@+id/lv_contact"
             android:layout_width="match_parent"

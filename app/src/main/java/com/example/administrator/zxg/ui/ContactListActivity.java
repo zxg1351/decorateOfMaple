@@ -10,22 +10,23 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.support.annotation.Nullable;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.BaseAdapter;
-import android.widget.ImageView;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.administrator.zxg.R;
+import com.example.administrator.zxg.adapter.ContactListAdapter;
 import com.example.administrator.zxg.common.CommonActivity;
 import com.example.administrator.zxg.entity.ContactEntity;
+import com.example.administrator.zxg.util.ToastUtil;
 
 import java.io.InputStream;
 import java.util.ArrayList;
+
+
 
 /**
  *
@@ -34,14 +35,28 @@ import java.util.ArrayList;
  */
 public class ContactListActivity extends CommonActivity {
 
+    private TextView tv_title;
+    private EditText et_search;
+    private String etSearch;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contact_list);
         getPhoneContacts();//获取电话联系人
-
+        initView();
         initList();
     }
+
+    /**
+     * 初始化页面
+     */
+    private void initView() {
+        tv_title =  (TextView)findViewById(R.id.tv_title);
+        tv_title.setText("联系人列表");
+        et_search = (EditText) findViewById(R.id.et_search);
+
+    }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -59,19 +74,11 @@ public class ContactListActivity extends CommonActivity {
             ContactsContract.CommonDataKinds.Phone.CONTACT_ID};
     //联系人显示名称
     private static final int PHONES_DISPLAY_NAME_INDEX = 0;
-    /**
-     * 电话号码
-     **/
+    //电话号码
     private static final int PHONES_NUMBER_INDEX = 1;
-
-    /**
-     * 头像ID
-     **/
+    //头像ID
     private static final int PHONES_PHOTO_ID_INDEX = 2;
-
-    /**
-     * 联系人的ID
-     **/
+    //联系人ID
     private static final int PHONES_CONTACT_ID_INDEX = 3;
 
     private void getPhoneContacts() {
@@ -110,7 +117,7 @@ public class ContactListActivity extends CommonActivity {
                     contactPhoto = BitmapFactory.decodeStream(input);
                 } else {
                     contactPhoto = BitmapFactory.decodeResource(
-                            getResources(), R.mipmap.ic_launcher);
+                            getResources(), R.mipmap.icon_head_bg);
                 }
                 ContactEntity mContact = new ContactEntity(contactName,
                         phoneNumber, contactPhoto);
@@ -129,64 +136,18 @@ public class ContactListActivity extends CommonActivity {
                 startActivity(intent);
             }
         });
-        lv.setAdapter(new MyAdapter());
+        lv.setAdapter(new ContactListAdapter(ContactListActivity.this,mContacts));
     }
 
-    class MyAdapter extends BaseAdapter {
-
-        @Override
-        public int getCount() {
-            if (mContacts != null && mContacts.size() > 0) {
-                return mContacts.size();
-            } else {
-                return 0;
-            }
-
-        }
-
-        @Override
-        public Object getItem(int i) {
-
-            if (mContacts!=null && mContacts.size()>0){
-                return mContacts.get(i);
-            }else {
-
-                return null;
-            }
-        }
-
-        @Override
-        public long getItemId(int i) {
-            return i;
-        }
-
-        @Override
-        public View getView(int i, View view, ViewGroup viewGroup) {
-          ViewHolder holder = null;
-            if (view == null){
-                holder = new ViewHolder();
-                view = LayoutInflater.from(ContactListActivity.this).inflate(R.layout.item_contact,null);
-                holder.name = (TextView) view.findViewById(R.id.tv_name);
-                holder.number = (TextView)view
-                        .findViewById(R.id.tv_number);
-                holder.photo = (ImageView) view
-                        .findViewById(R.id.iv_photo);
-                view.setTag(holder);
-            }else{
-                holder = (ViewHolder) view.getTag();
-            }
-            ContactEntity contact = mContacts.get(i);
-            holder.name.setText(contact.getName()+"");
-            holder.number.setText(contact.getNumber()+"'");
-            holder.photo.setImageBitmap(contact.getPhoto());
-            return view;
-        }
-        class ViewHolder{
-            TextView name;
-            TextView number;
-            ImageView photo;
-        }
+    /**
+     * 联系查询
+     * @param view
+     */
+    public void contactSearch(View view){
+        ToastUtil.showShort(ContactListActivity.this,"查询结果信息为成功");
+        etSearch = et_search.getText().toString().trim();
     }
+
 
 
 }

@@ -11,4 +11,7 @@
     <string name="input_mobile">请输入手机号码</string>
     <string name="verificationCode">请输入验证码</string>
     <string name="input_newPassword">请输入新密码</string>
+    <string name="search_label">请输入搜索文字</string>
+    <string name="search_label1">请输入搜索文字</string>
+    <string name="settings_description">设置描述</string>
 </resources>
