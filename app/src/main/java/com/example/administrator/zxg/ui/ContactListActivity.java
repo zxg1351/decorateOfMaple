@@ -146,6 +146,9 @@ public class ContactListActivity extends CommonActivity {
     public void contactSearch(View view){
         ToastUtil.showShort(ContactListActivity.this,"查询结果信息为成功");
         etSearch = et_search.getText().toString().trim();
+
+        //TODO 正常走查询接口
+
     }
 
 
