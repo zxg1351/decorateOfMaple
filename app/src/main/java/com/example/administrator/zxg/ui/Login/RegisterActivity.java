@@ -8,6 +8,7 @@ import android.widget.TextView;
 import com.example.administrator.zxg.R;
 import com.example.administrator.zxg.common.CommonActivity;
 import com.example.administrator.zxg.util.ToastUtil;
+import com.orhanobut.logger.Logger;
 
 /**
  * @Description 注册功能
@@ -40,6 +41,7 @@ public class RegisterActivity extends CommonActivity {
     public void cancel(View view){
         ToastUtil.showShort(RegisterActivity.this,"关闭页面成功");
         finish();
-
+        Logger.d("hello");
+        Logger.i("activity created");
     }
 }

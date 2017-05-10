@@ -9,7 +9,7 @@ import android.widget.ImageView;
 import com.bumptech.glide.Glide;
 import com.example.administrator.zxg.R;
 import com.example.administrator.zxg.common.CommonActivity;
-
+import com.orhanobut.logger.Logger;
 
 
 /**
@@ -43,5 +43,7 @@ public class WelcomeActivity extends CommonActivity {
 
         Intent intent = new Intent(WelcomeActivity.this, StartActivity.class);
         startActivity(intent);
+
+        Logger.i("欢迎来到天道酬勤欢迎页");
     }
 }
