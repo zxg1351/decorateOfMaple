@@ -11,6 +11,7 @@ import android.widget.TextView;
 import com.example.administrator.zxg.MainActivity;
 import com.example.administrator.zxg.R;
 import com.example.administrator.zxg.common.CommonActivity;
+import com.example.administrator.zxg.ui.GlideActivity;
 import com.example.administrator.zxg.util.ToastUtil;
 
 /**
@@ -84,7 +85,7 @@ public class LoginActivity extends CommonActivity {
      */
     public void  forgetPassword(View view){
 
-        Intent intent = new Intent(LoginActivity.this,ForgetPasswordActivity.class);
+        Intent intent = new Intent(LoginActivity.this,GlideActivity.class);
         startActivity(intent);
     }
 }

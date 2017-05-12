@@ -22,6 +22,7 @@ import com.example.administrator.zxg.adapter.ContactListAdapter;
 import com.example.administrator.zxg.common.CommonActivity;
 import com.example.administrator.zxg.entity.ContactEntity;
 import com.example.administrator.zxg.util.ToastUtil;
+import com.orhanobut.logger.Logger;
 
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -38,6 +39,11 @@ public class ContactListActivity extends CommonActivity {
     private TextView tv_title;
     private EditText et_search;
     private String etSearch;
+
+    private String JSON_CONTENT = "{\"weatherinfo\":{\"city\":\"北京\",\"cityid\":\"101010100\"," +
+            "\"temp\":\"18\",\"WD\":\"东南风\",\"WS\":\"1级\",\"SD\":\"17%\",\"WSE\":\"1\"," +
+            "\"time\":\"17:05\",\"isRadar\":\"1\",\"Radar\":\"JC_RADAR_AZ9010_JB\"," +
+            "\"njd\":\"暂无实况\",\"qy\":\"1011\",\"rain\":\"0\"}}";
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,6 +51,7 @@ public class ContactListActivity extends CommonActivity {
         getPhoneContacts();//获取电话联系人
         initView();
         initList();
+        Logger.json(JSON_CONTENT);
     }
 
     /**
@@ -134,6 +141,8 @@ public class ContactListActivity extends CommonActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Intent intent = new Intent(ContactListActivity.this,LayoutActivity.class);
                 startActivity(intent);
+                finish();
+                Logger.d("跳转到联系人页面");
             }
         });
         lv.setAdapter(new ContactListAdapter(ContactListActivity.this,mContacts));

@@ -13,6 +13,7 @@ import com.example.administrator.zxg.common.CommonActivity;
 import com.example.administrator.zxg.util.ListItemDecoration;
 import com.example.administrator.zxg.ui.ContactListActivity;
 import com.example.administrator.zxg.ui.ThreeActivity;
+import com.orhanobut.logger.Logger;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,6 +30,7 @@ public class MainActivity extends CommonActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initDate();
+        Logger.d(mData);
         tv_title.setText("天涯海角");
         recyclerview = (RecyclerView) findViewById(R.id.id_recyclerview);
         recyclerview.setLayoutManager(new LinearLayoutManager(this));
@@ -40,6 +42,7 @@ public class MainActivity extends CommonActivity {
             public void onItemClick(View view, int position) {
                 Intent intent = new Intent(MainActivity.this, ContactListActivity.class);
                 startActivity(intent);
+
             }
 
             @Override

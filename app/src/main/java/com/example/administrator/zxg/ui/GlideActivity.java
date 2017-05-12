@@ -9,6 +9,7 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.example.administrator.zxg.R;
 import com.example.administrator.zxg.common.CommonActivity;
+import com.example.administrator.zxg.util.GlideImageUtils;
 
 import java.io.File;
 
@@ -16,51 +17,82 @@ import java.io.File;
  * Created by Administrator on 2016/9/26.
  */
 public class GlideActivity extends CommonActivity {
-    private ImageView imageView, image3, image4, image5, image6, image7, image8, image9;
 
+    private ImageView imageViewUrl,imageResource,imageLocal;
+    String url="";
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_glide);
-        imageView = (ImageView) findViewById(R.id.iv_1);
-        image5 = (ImageView) findViewById(R.id.iv_5);
-        image3 = (ImageView) findViewById(R.id.iv_3);
-        image4 = (ImageView) findViewById(R.id.iv_4);
-        image6 = (ImageView) findViewById(R.id.iv_6);
-        image7 = (ImageView) findViewById(R.id.iv_7);
+        url    = "http://www.qq745.com/uploads/allimg/141106/1-141106153Q5.png";
+        //初始化
+        initView();
+        //加载网络图片
+        getInternetPicture(url);
+        //加载资源文件
+        getResourcesImage();
+        //加载本地文件图片
+        getLocalImageView();
+    }
 
-
-//        int source = R.drawable.p;
-        Glide.with(this).load(R.drawable.pic1).asBitmap().into(imageView);
-        String url = "http://www.qq745.com/uploads/allimg/141106/1-141106153Q5.png";
-        Glide.with(this).load(url).into(image5);
-
+    private void getLocalImageView() {
 
         File file = new File(Environment.getExternalStorageDirectory(), "longzhu_icon.png");
-        Glide.with(this).load(file).asBitmap().into(image7);
-        //设置默认图片和加载失败时显示的图片
-        Glide.with(this).load(file).asBitmap().placeholder(R.drawable.pic1).into(image6);
+        GlideImageUtils.loadCircleImageFile(this,file,imageLocal);
+//        Glide.with(this).
+//                load(file)
+//                .asBitmap()
+//                .placeholder(R.mipmap.icon_error)
+//                .error(R.mipmap.icon_error)
+//                .into(imageLocal);
+    }
+    /**
+     * 初始化页面
+     */
+    private void initView() {
+        imageViewUrl =(ImageView) findViewById(R.id.iv_imageUrl);
+        imageResource =(ImageView) findViewById(R.id.iv_imageResource);
+        imageLocal =(ImageView)findViewById(R.id.iv_imageLocal);
+    }
 
-//        淡入显示效果
-        Glide.with(this).load(file).placeholder(R.drawable.pic1).
-                error(R.mipmap.ic_launcher).crossFade().into(image6);
-        Glide.with(this).load(file).placeholder(R.drawable.pic1).
-                error(R.mipmap.ic_launcher).crossFade(1000).//淡入顯示時間
-                override(80,80).//最後變成80固定的橡樹值
-                into(image4);
+    /**
+     * 获取网络图片
+     */
+//    磁盘缓存,磁盘缓存通过diskCacheStrategy(DiskCacheStrategy)来设置,DiskCacheStrategy一共有4种模式:
+//
+//    DiskCacheStrategy.NONE:什么都不缓存
+//    DiskCacheStrategy.SOURCE:仅缓存原图(全分辨率的图片)
+//    DiskCacheStrategy.RESULT:仅缓存最终的图片,即修改了尺寸或者转换后的图片
+//    DiskCacheStrategy.ALL:缓存所有版本的图片,默认模式
+    private void getInternetPicture(String url) {
 
-//设置缩略图有2种方式:
-      //  通过thumbnail(float)指定0.0f~1.0f的原始图像大小,例如全像素的大小是500*500,如果设置为thumbnail为0.1f,即目标图片的10%,显示的缩略图大小就是50*50;
-        Glide.with(this).
-                load(R.drawable.pic1).
-                placeholder(R.drawable.pic1).//加载中显示的图片
-                error(R.drawable.pic1).//加载失败时显示的图片
-                crossFade(1000).//淡入淡出,注意:如果设置了这个,则必须要去掉asBitmap
-                override(80, 80).//设置最终显示的图片像素为80*80,注意:这个是像素,而不是控件的宽高
-                centerCrop().//中心裁剪,缩放填充至整个ImageView
-                skipMemoryCache(true).//跳过内存缓存
-                diskCacheStrategy(DiskCacheStrategy.RESULT).//保存最终图片
-                thumbnail(0.1f).//10%的原图大小
-                into(image3);
+        GlideImageUtils.loadRoundCornerImage(this,url,imageViewUrl);
+//        Glide.with(this)
+//                .load(url)//url路径
+//                .asBitmap()//强制处理为bitmiap
+//                .placeholder(R.mipmap.icon_error)//加载中显示的图片
+//                .error(R.mipmap.icon_error)//加载失败时显示的图片
+//                .override(100,100)
+//                .centerCrop()//中心裁剪,缩放填充至整个ImageView
+//                .skipMemoryCache(true)
+//                .diskCacheStrategy(DiskCacheStrategy.RESULT)
+//                .thumbnail(0.1f)
+//                .into(imageViewUrl);
+    }
+
+    /**
+     * 获取资源图片
+     */
+    private void getResourcesImage() {
+
+        GlideImageUtils.loadImageViewDrawable(this,R.mipmap.start,imageResource);
+//        Glide.with(this)
+//                .load(R.mipmap.vintage)
+//                .asBitmap()
+//                .placeholder(R.mipmap.icon_error)
+//                .error(R.mipmap.icon_error)
+//                .centerCrop()
+//                .into(imageResource);
+
     }
 }

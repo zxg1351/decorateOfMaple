@@ -7,12 +7,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.example.administrator.zxg.R;
+import com.example.administrator.zxg.common.CommonActivity;
 import com.example.administrator.zxg.imageandvideo.SelectImageAndVideoActivity;
 
 /**
  * Created by Administratlor on 2016/8/30.
  */
-public class LayoutActivity extends AppCompatActivity {
+public class LayoutActivity extends CommonActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

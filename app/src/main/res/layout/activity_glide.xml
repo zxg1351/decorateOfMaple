@@ -2,47 +2,24 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
+    android:background="@color/white"
               android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"/>
+   <ImageView
+       android:id="@+id/iv_imageUrl"
+       android:layout_width="300px"
+       android:layout_height="300px"
+       android:scaleType="fitXY"/>
 
-    <ImageView
-        android:id="@+id/iv_1"
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"/>
-
-    <ImageView
-        android:id="@+id/iv_3"
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"/>
-
-    <ImageView
-        android:id="@+id/iv_5"
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"/>
-
-    <ImageView
-        android:id="@+id/iv_4"
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"/>
-
-    <ImageView
-        android:id="@+id/iv_6"
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"/>
-
-    <ImageView
-        android:id="@+id/iv_7"
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"/>
-
-    <ImageView
-        android:id="@+id/iv_8"
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"/>
-
+   <ImageView
+       android:id="@+id/iv_imageResource"
+       android:layout_width="300px"
+       android:layout_height="300px"
+       android:scaleType="fitXY"/>
+   <ImageView
+       android:id="@+id/iv_imageLocal"
+       android:layout_width="300px"
+       android:layout_height="300px"
+       android:scaleType="fitXY"/>
 
 </LinearLayout>
