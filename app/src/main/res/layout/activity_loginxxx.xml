@@ -118,6 +118,18 @@
             android:textColor="@color/black"
             android:textSize="@dimen/test_size_one"
             android:layout_weight="0.10" />
+        <TextView
+            android:id="@+id/bt_04"
+            android:layout_width="134px"
+            android:layout_height="54px"
+            android:layout_marginBottom="@dimen/test_size"
+            android:background="@color/coffee"
+            android:gravity="center"
+            android:onClick="testlogin"
+            android:text="测试"
+            android:textColor="@color/black"
+            android:textSize="@dimen/test_size_one"
+            android:layout_weight="0.10" />
     </LinearLayout>
 
 

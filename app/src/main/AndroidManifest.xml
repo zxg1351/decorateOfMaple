@@ -74,6 +74,8 @@
             android:theme="@style/themeSetting"></activity>
         <activity android:name=".ui.Login.RegisterActivity"
             android:theme="@style/themeSetting"></activity>
+        <activity android:name=".ui.EmptyListActivity"
+            android:theme="@style/themeSetting"></activity>
     </application>
 
 </manifest>
