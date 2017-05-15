@@ -1,19 +1,41 @@
 package com.example.administrator.zxg.ui;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.TextView;
 
+import com.bigkoo.pickerview.OptionsPickerView;
 import com.example.administrator.zxg.R;
 import com.example.administrator.zxg.common.CommonActivity;
+import com.example.administrator.zxg.entity.JsonBean;
 import com.example.administrator.zxg.imageandvideo.SelectImageAndVideoActivity;
+import com.example.administrator.zxg.ui.Glide.GlideActivity;
+import com.example.administrator.zxg.ui.Picker.JsonDataActivity;
+import com.example.administrator.zxg.util.GetJsonDataUtil;
+import com.google.gson.Gson;
+import com.orhanobut.logger.Logger;
+
+import org.json.JSONArray;
+
+import java.util.ArrayList;
 
 /**
  * Created by Administratlor on 2016/8/30.
  */
 public class LayoutActivity extends CommonActivity {
+    public static final int MSG_LOAD_DATA = 0x0001;
+    public static final int MSG_LOAD_SUCCESS = 0x0002;
+    public static final int MSG_LOAD_FAILED = 0x0003;
+    public Thread thread;
+    public ArrayList<JsonBean> options1Items = new ArrayList<>();
+    public ArrayList<ArrayList<String>> options2Items = new ArrayList<>();
+    public ArrayList<ArrayList<ArrayList<String>>> options3Items = new ArrayList<>();
+    public boolean isLoaded = false;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -71,5 +93,10 @@ public class LayoutActivity extends CommonActivity {
         startActivity(intent);
 
     }
+    public void showPicker(final View view){
+        Intent intent = new Intent(this, JsonDataActivity.class);
+        startActivity(intent);
+    }
+
 
 }

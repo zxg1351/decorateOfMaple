@@ -54,7 +54,7 @@
         <activity android:name=".ui.LayoutActivity"
 
             android:theme="@style/AppTheme"></activity>
-        <activity android:name=".ui.GlideActivity"
+        <activity android:name=".ui.Glide.GlideActivity"
             android:theme="@style/themeSetting"></activity>
         <activity android:name=".ui.MoreContentActivity"
             android:theme="@style/themeSetting"></activity>
@@ -76,6 +76,8 @@
             android:theme="@style/themeSetting"></activity>
         <activity android:name=".ui.EmptyListActivity"
             android:theme="@style/themeSetting"></activity>
+        <activity android:name=".ui.Picker.JsonDataActivity"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>

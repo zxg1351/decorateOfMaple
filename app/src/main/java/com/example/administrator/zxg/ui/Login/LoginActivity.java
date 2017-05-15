@@ -12,7 +12,8 @@ import com.example.administrator.zxg.MainActivity;
 import com.example.administrator.zxg.R;
 import com.example.administrator.zxg.common.CommonActivity;
 import com.example.administrator.zxg.ui.EmptyListActivity;
-import com.example.administrator.zxg.ui.GlideActivity;
+import com.example.administrator.zxg.ui.Glide.GlideActivity;
+import com.example.administrator.zxg.ui.LayoutActivity;
 import com.example.administrator.zxg.util.ToastUtil;
 
 /**
@@ -91,7 +92,7 @@ public class LoginActivity extends CommonActivity {
     }
     public  void testlogin(View view){
 
-        Intent intent = new Intent(this, EmptyListActivity.class);
+        Intent intent = new Intent(this, LayoutActivity.class);
         startActivity(intent);
     }
 }

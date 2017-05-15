@@ -9,7 +9,6 @@ import android.widget.ImageView;
 import com.bumptech.glide.Glide;
 import com.example.administrator.zxg.R;
 import com.example.administrator.zxg.common.CommonActivity;
-import com.example.administrator.zxg.ui.GlideActivity;
 import com.orhanobut.logger.Logger;
 
 import java.util.ArrayList;
