@@ -12,7 +12,8 @@ import com.example.administrator.zxg.R;
 public class SystemSetActivity extends Activity {
 
     private TextView  tv_project_name;
-    private TextView tv_test;
+    private TextView tv_test,tv_title;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,5 +25,7 @@ public class SystemSetActivity extends Activity {
 
         tv_project_name = (TextView) findViewById(R.id.tv_project_name);
         tv_test = (TextView) findViewById(R.id.tv_test);
+        tv_title=(TextView) findViewById(R.id.tv_title);
+        tv_title.setText("系统设置");
     }
 }

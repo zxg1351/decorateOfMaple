@@ -1,26 +1,20 @@
 package com.example.administrator.zxg.ui;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Message;
 import android.support.annotation.Nullable;
 import android.view.View;
-import android.widget.TextView;
 
-import com.bigkoo.pickerview.OptionsPickerView;
 import com.example.administrator.zxg.R;
 import com.example.administrator.zxg.common.CommonActivity;
 import com.example.administrator.zxg.entity.JsonBean;
 import com.example.administrator.zxg.imageandvideo.SelectImageAndVideoActivity;
 import com.example.administrator.zxg.ui.Glide.GlideActivity;
 import com.example.administrator.zxg.ui.Picker.JsonDataActivity;
-import com.example.administrator.zxg.util.GetJsonDataUtil;
-import com.google.gson.Gson;
-import com.orhanobut.logger.Logger;
-
-import org.json.JSONArray;
+import com.example.administrator.zxg.ui.RecycleView.GridLayoutActivity;
+import com.example.administrator.zxg.ui.RecycleView.MoreContentActivity;
+import com.example.administrator.zxg.ui.RecycleView.StaggeredActivity;
+import com.example.administrator.zxg.ui.RecycleView.StaggeredGridLayoutActivity;
 
 import java.util.ArrayList;
 
