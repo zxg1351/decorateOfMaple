@@ -45,18 +45,18 @@
         <activity android:name=".ui.ImageActivity"
             android:theme="@style/themeSetting"
             ></activity>
-        <activity android:name=".ui.GridLayoutActivity"
+        <activity android:name=".ui.RecycleView.GridLayoutActivity"
             android:theme="@style/themeSetting"></activity>
-        <activity android:name=".ui.StaggeredActivity"
+        <activity android:name=".ui.RecycleView.StaggeredActivity"
             android:theme="@style/themeSetting"></activity>
-        <activity android:name=".ui.StaggeredGridLayoutActivity"
+        <activity android:name=".ui.RecycleView.StaggeredGridLayoutActivity"
             android:theme="@style/themeSetting"></activity>
         <activity android:name=".ui.LayoutActivity"
 
             android:theme="@style/AppTheme"></activity>
         <activity android:name=".ui.Glide.GlideActivity"
             android:theme="@style/themeSetting"></activity>
-        <activity android:name=".ui.MoreContentActivity"
+        <activity android:name=".ui.RecycleView.MoreContentActivity"
             android:theme="@style/themeSetting"></activity>
         <activity android:name=".ui.SelectPicActivity"
             android:theme="@style/themeSetting"></activity>
