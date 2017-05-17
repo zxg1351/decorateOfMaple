@@ -34,9 +34,7 @@
         <activity android:name=".imageandvideo.SelectPictrueActivity"></activity>
         <activity android:name=".imageandvideo.ShowImageActivity"></activity>
         <activity android:name=".imageandvideo.SelectImageAndVideoActivity"></activity>
-        <activity
-            android:name=".ui.SecondActivity"
-            android:theme="@style/themeSetting"></activity>
+
         <activity android:name=".ui.ThreeActivity"
             android:theme="@style/themeSetting"></activity>
         <activity android:name=".ui.ContactListActivity"
@@ -78,6 +76,8 @@
             android:theme="@style/themeSetting"></activity>
         <activity android:name=".ui.Picker.JsonDataActivity"
             android:theme="@style/AppTheme"></activity>
+        <activity android:name=".ui.Login.UserProtocolActivity"
+            android:theme="@style/themeSetting"></activity>
     </application>
 
 </manifest>

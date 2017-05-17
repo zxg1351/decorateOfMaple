@@ -18,7 +18,7 @@ public class MyApplication extends Application {
     public void onCreate() {
         super.onCreate();
         Logger.init(TAG)
-                .logLevel(LogLevel.NONE)//设置不打印日志
+                .logLevel(LogLevel.FULL)//设置NONE不打印日志
         ;
     }
 
