@@ -78,6 +78,8 @@
             android:theme="@style/AppTheme"></activity>
         <activity android:name=".ui.Login.UserProtocolActivity"
             android:theme="@style/themeSetting"></activity>
+        <activity android:name=".ui.ContactList.ContactListView"></activity>
+        <activity android:name=".ui.ContactListNoBug.ContactListNoBugActivity"></activity>
     </application>
 
 </manifest>

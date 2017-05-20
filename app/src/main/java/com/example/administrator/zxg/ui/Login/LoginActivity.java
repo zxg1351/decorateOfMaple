@@ -11,6 +11,9 @@ import android.widget.TextView;
 import com.example.administrator.zxg.MainActivity;
 import com.example.administrator.zxg.R;
 import com.example.administrator.zxg.common.CommonActivity;
+import com.example.administrator.zxg.ui.ContactList.ContactListView;
+import com.example.administrator.zxg.ui.ContactListActivity;
+import com.example.administrator.zxg.ui.ContactListNoBug.ContactListNoBugActivity;
 import com.example.administrator.zxg.ui.Glide.GlideActivity;
 import com.example.administrator.zxg.util.ToastUtil;
 
@@ -90,7 +93,7 @@ public class LoginActivity extends CommonActivity {
     }
     public  void testlogin(View view){
 
-        Intent intent = new Intent(this, UserProtocolActivity.class);
+        Intent intent = new Intent(this, ContactListView.class);
         startActivity(intent);
     }
 }

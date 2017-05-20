@@ -12,7 +12,7 @@ public class ContactEntity  {
     private String number;
     /** 联系人头像 **/
     private Bitmap photo;
-
+    private String sortLetters;
     @Override
     public String toString() {
         return "ContactEntity{" +
@@ -20,6 +20,9 @@ public class ContactEntity  {
                 ", number='" + number + '\'' +
                 ", photo=" + photo +
                 '}';
+    }
+
+    public ContactEntity() {
     }
 
     public ContactEntity(String name, String number, Bitmap photo) {
@@ -53,4 +56,11 @@ public class ContactEntity  {
         this.photo = photo;
     }
 
+    public String getSortLetters() {
+        return sortLetters;
+    }
+
+    public void setSortLetters(String sortLetters) {
+        this.sortLetters = sortLetters;
+    }
 }

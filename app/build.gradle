@@ -33,4 +33,5 @@ dependencies {
     compile 'com.orhanobut:logger:1.15'
     compile 'com.google.code.gson:gson:2.8.0'
     compile 'com.contrarywind:Android-PickerView:3.2.2'
+    compile files('libs/CommonAdapter.jar')
 }
