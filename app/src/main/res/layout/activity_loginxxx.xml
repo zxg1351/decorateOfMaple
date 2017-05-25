@@ -125,7 +125,7 @@
             android:layout_marginBottom="@dimen/test_size"
             android:background="@color/coffee"
             android:gravity="center"
-            android:onClick="testlogin"
+            android:onClick="testLogin"
             android:text="测试"
             android:textColor="@color/black"
             android:textSize="@dimen/test_size_one"

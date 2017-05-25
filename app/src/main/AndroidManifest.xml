@@ -80,6 +80,7 @@
             android:theme="@style/themeSetting"></activity>
         <activity android:name=".ui.ContactList.ContactListView"></activity>
         <activity android:name=".ui.ContactListNoBug.ContactListNoBugActivity"></activity>
+        <activity android:name=".ui.SnakerbarActivity"></activity>
     </application>
 
 </manifest>
