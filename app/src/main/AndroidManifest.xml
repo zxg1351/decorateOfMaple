@@ -81,6 +81,7 @@
         <activity android:name=".ui.ContactList.ContactListView"></activity>
         <activity android:name=".ui.ContactListNoBug.ContactListNoBugActivity"></activity>
         <activity android:name=".ui.SnakerbarActivity"></activity>
+        <activity android:name=".ui.TestRetrofit"></activity>
     </application>
 
 </manifest>

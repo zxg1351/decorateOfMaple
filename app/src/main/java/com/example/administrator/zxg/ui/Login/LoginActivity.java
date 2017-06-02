@@ -16,6 +16,7 @@ import com.example.administrator.zxg.ui.ContactListActivity;
 import com.example.administrator.zxg.ui.ContactListNoBug.ContactListNoBugActivity;
 import com.example.administrator.zxg.ui.Glide.GlideActivity;
 import com.example.administrator.zxg.ui.SnakerbarActivity;
+import com.example.administrator.zxg.ui.TestRetrofit;
 import com.example.administrator.zxg.util.ToastUtil;
 
 /**
@@ -93,7 +94,7 @@ public class LoginActivity extends CommonActivity {
         startActivity(intent);
     }
     public  void testLogin(View view){
-        Intent intent = new Intent(this, SnakerbarActivity.class);
+        Intent intent = new Intent(this, TestRetrofit.class);
         startActivity(intent);
     }
 }
