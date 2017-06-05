@@ -7,7 +7,7 @@ package com.example.administrator.zxg.common;
  */
 
 public class IConstant {
-
+    public static String baseUrl = "https://api.douban.com/v2/movie/";
     public static String URL_IP ="";
 
     public static String PAMAM_STR_ZERO = "0";
