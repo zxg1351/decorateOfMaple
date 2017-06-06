@@ -81,10 +81,10 @@ public class LoginActivity extends CommonActivity {
             userLoginBean.setUserName(etUserName);
             userLoginBean.setUserPassword(etPassWord);
 
-//            Map<String,String> parms = new HashMap<>();
-//            parms.put("userName",etUserName);
-//            parms.put("passWord",etPassWord);
-            HttpMethods.getInstance().userLoginPostTest(new Subscriber<UserLoginBean>() {
+            Map<String,String> parms = new HashMap<>();
+            parms.put("userName",etUserName);
+            parms.put("passWord",etPassWord);
+            HttpMethods.getInstance().login(new Subscriber<UserLoginBean>() {
                 @Override
                 public void onCompleted() {
 
@@ -105,7 +105,7 @@ public class LoginActivity extends CommonActivity {
 
                 }
 
-            },userLoginBean);
+            },parms);
 
 
         }

@@ -32,7 +32,7 @@ public interface RetrofitService {
     @GET("user/userLogin")
      Observable<UserLoginBean> userLogin(@QueryMap Map<String,String> userLoginBean);
 
-    @Headers({"Content-Type: application/json","Accept: application/json"})
-    @POST("user/userLoginPostTest")
+//    @Headers({"Content-Type: application/json","Accept: application/json"})
+    @GET("user/userLoginPostTest")
     Observable<UserLoginBean> userLoginPostTest(@Body UserLoginBean userLoginBean);
 }
