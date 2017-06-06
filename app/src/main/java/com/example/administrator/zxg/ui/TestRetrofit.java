@@ -7,11 +7,13 @@ import android.widget.TextView;
 import com.example.administrator.zxg.R;
 import com.example.administrator.zxg.common.CommonActivity;
 import com.example.administrator.zxg.common.IConstant;
+import com.example.administrator.zxg.entity.DemoModel;
 import com.example.administrator.zxg.http.HttpMethods;
 import com.example.administrator.zxg.http.HttpResult;
 import com.example.administrator.zxg.http.RetrofitService;
 import com.example.administrator.zxg.http.Subject;
 import com.example.administrator.zxg.util.ToastUtil;
+import com.orhanobut.logger.Logger;
 
 import java.util.List;
 
@@ -52,7 +54,7 @@ public class TestRetrofit extends CommonActivity {
 
     private void getMovie() {
 
-        HttpMethods.getInstance().getTopMovie(new Subscriber<HttpResult<List<Subject>>>() {
+        HttpMethods.getInstance().getBaseUrl(new Subscriber<DemoModel>() {
             @Override
             public void onCompleted() {
                 ToastUtil.showShort(TestRetrofit.this,"Get Top Movie Completed");
@@ -61,12 +63,17 @@ public class TestRetrofit extends CommonActivity {
             @Override
             public void onError(Throwable e) {
                 result_TV.setText(e.getMessage());
+                Logger.d(e.getMessage());
             }
 
             @Override
-            public void onNext(HttpResult<List<Subject>> listHttpResult) {
-                result_TV.setText(listHttpResult.toString());
+            public void onNext(DemoModel demoModelHttpResult) {
+                Logger.d(demoModelHttpResult.toString());
+
+                result_TV.setText("设置ID:"+demoModelHttpResult.getId()+"姓名："+demoModelHttpResult.getName());
             }
+
+
         });
 //        Retrofit retrofit = new Retrofit.Builder()
 //                .baseUrl(IConstant.baseUrl)

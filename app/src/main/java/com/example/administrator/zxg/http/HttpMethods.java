@@ -1,8 +1,12 @@
 package com.example.administrator.zxg.http;
 
 import com.example.administrator.zxg.common.IConstant;
+import com.example.administrator.zxg.entity.DemoModel;
+import com.example.administrator.zxg.entity.UserLoginBean;
 
+import java.net.UnknownServiceException;
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 import okhttp3.OkHttpClient;
@@ -40,7 +44,7 @@ public class HttpMethods {
                 .client(httpClientBuilder.build())
                 .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create())
-                .baseUrl(IConstant.baseUrl)
+                .baseUrl(IConstant.base_zxg)
                 .build();
 
         retrofitService = retrofit.create(RetrofitService.class);
@@ -69,5 +73,33 @@ public class HttpMethods {
                 .unsubscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(subscriber);
+    }
+
+    public void getBaseUrl(Subscriber<DemoModel> subscriber){
+        retrofitService.getDemoModel()
+                .subscribeOn(Schedulers.io())
+                .unsubscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(subscriber);
+    }
+
+     public void login(Subscriber<UserLoginBean> subscriber, Map<String,String> userLoginBean){
+         retrofitService.userLogin(userLoginBean)
+                 .subscribeOn(Schedulers.io())
+                 .unsubscribeOn(Schedulers.io())
+                 .observeOn(AndroidSchedulers.mainThread())
+                 .subscribe(subscriber);
+
+
+     }
+
+    public void userLoginPostTest(Subscriber<UserLoginBean> subscriber, UserLoginBean userLoginBean){
+        retrofitService.userLoginPostTest(userLoginBean)
+                .subscribeOn(Schedulers.io())
+                .unsubscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(subscriber);
+
+
     }
 }

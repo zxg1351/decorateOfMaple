@@ -11,6 +11,8 @@ import android.widget.TextView;
 import com.example.administrator.zxg.MainActivity;
 import com.example.administrator.zxg.R;
 import com.example.administrator.zxg.common.CommonActivity;
+import com.example.administrator.zxg.entity.UserLoginBean;
+import com.example.administrator.zxg.http.HttpMethods;
 import com.example.administrator.zxg.ui.ContactList.ContactListView;
 import com.example.administrator.zxg.ui.ContactListActivity;
 import com.example.administrator.zxg.ui.ContactListNoBug.ContactListNoBugActivity;
@@ -18,6 +20,11 @@ import com.example.administrator.zxg.ui.Glide.GlideActivity;
 import com.example.administrator.zxg.ui.SnakerbarActivity;
 import com.example.administrator.zxg.ui.TestRetrofit;
 import com.example.administrator.zxg.util.ToastUtil;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import rx.Subscriber;
 
 /**
  * Created by Administrator on 2016/10/5.
@@ -69,8 +76,38 @@ public class LoginActivity extends CommonActivity {
         } else if (etPassWord.length() < 6||etPassWord.length()>16) {
             ToastUtil.showShort(LoginActivity.this, getString(R.string.input_userPassword_length));
         } else {
-            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-            startActivity(intent);
+
+            UserLoginBean userLoginBean = new UserLoginBean();
+            userLoginBean.setUserName(etUserName);
+            userLoginBean.setUserPassword(etPassWord);
+
+//            Map<String,String> parms = new HashMap<>();
+//            parms.put("userName",etUserName);
+//            parms.put("passWord",etPassWord);
+            HttpMethods.getInstance().userLoginPostTest(new Subscriber<UserLoginBean>() {
+                @Override
+                public void onCompleted() {
+
+                }
+
+                @Override
+                public void onError(Throwable e) {
+
+                }
+
+                @Override
+                public void onNext(UserLoginBean userLoginBean) {
+                    if (userLoginBean.getResultCode().equals("0")){
+                        ToastUtil.showShort(LoginActivity.this,userLoginBean.getResultMessage()+userLoginBean.getUserName()+userLoginBean.getUserPassword());
+                        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                        startActivity(intent);
+                    }
+
+                }
+
+            },userLoginBean);
+
+
         }
 
     }

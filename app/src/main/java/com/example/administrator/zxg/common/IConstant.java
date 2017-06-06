@@ -7,7 +7,9 @@ package com.example.administrator.zxg.common;
  */
 
 public class IConstant {
-    public static String baseUrl = "https://api.douban.com/v2/movie/";
+//    public static String baseUrl = "https://api.douban.com/v2/movie/";
+
+    public static String base_zxg = "http://192.168.31.181:9090/zxgspring-boot/";
     public static String URL_IP ="";
 
     public static String PAMAM_STR_ZERO = "0";
