@@ -11,6 +11,7 @@ import android.widget.TextView;
 import com.example.administrator.zxg.MainActivity;
 import com.example.administrator.zxg.R;
 import com.example.administrator.zxg.common.CommonActivity;
+import com.example.administrator.zxg.entity.UserBean;
 import com.example.administrator.zxg.entity.UserLoginBean;
 import com.example.administrator.zxg.http.HttpMethods;
 import com.example.administrator.zxg.ui.ContactList.ContactListView;
@@ -81,10 +82,14 @@ public class LoginActivity extends CommonActivity {
             userLoginBean.setUserName(etUserName);
             userLoginBean.setUserPassword(etPassWord);
 
-            Map<String,String> parms = new HashMap<>();
-            parms.put("userName",etUserName);
-            parms.put("passWord",etPassWord);
-            HttpMethods.getInstance().login(new Subscriber<UserLoginBean>() {
+//            UserBean userBean = new UserBean();
+//            userBean.setmUserAccount(etUserName);
+//            userBean.setmUserPassword(etPassWord);
+
+//            Map<String,String> parms = new HashMap<>();
+//            parms.put("userName",etUserName);
+//            parms.put("passWord",etPassWord);
+            HttpMethods.getInstance().userLoginPost(new Subscriber<UserBean>() {
                 @Override
                 public void onCompleted() {
 
@@ -96,16 +101,16 @@ public class LoginActivity extends CommonActivity {
                 }
 
                 @Override
-                public void onNext(UserLoginBean userLoginBean) {
-                    if (userLoginBean.getResultCode().equals("0")){
-                        ToastUtil.showShort(LoginActivity.this,userLoginBean.getResultMessage()+userLoginBean.getUserName()+userLoginBean.getUserPassword());
+                public void onNext(UserBean userBean) {
+                    if (userBean.getResultCode().equals("0")){
+                        ToastUtil.showShort(LoginActivity.this,userBean.getResultMessage()+userBean.getmUserAccount()+userBean.getmUserPassword());
                         Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                         startActivity(intent);
                     }
 
                 }
 
-            },parms);
+            },userLoginBean);
 
 
         }

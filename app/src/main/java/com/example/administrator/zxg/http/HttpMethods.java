@@ -2,6 +2,7 @@ package com.example.administrator.zxg.http;
 
 import com.example.administrator.zxg.common.IConstant;
 import com.example.administrator.zxg.entity.DemoModel;
+import com.example.administrator.zxg.entity.UserBean;
 import com.example.administrator.zxg.entity.UserLoginBean;
 
 import java.net.UnknownServiceException;
@@ -100,6 +101,15 @@ public class HttpMethods {
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(subscriber);
 
+    }
 
+    public void userLoginPost (Subscriber<UserBean> subscriber,UserLoginBean userBean){
+
+
+        retrofitService.userLoginPost(userBean)
+                .subscribeOn(Schedulers.io())
+                .unsubscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(subscriber);
     }
 }

@@ -1,6 +1,7 @@
 package com.example.administrator.zxg.http;
 
 import com.example.administrator.zxg.entity.DemoModel;
+import com.example.administrator.zxg.entity.UserBean;
 import com.example.administrator.zxg.entity.UserLoginBean;
 
 import java.util.List;
@@ -35,4 +36,9 @@ public interface RetrofitService {
 //    @Headers({"Content-Type: application/json","Accept: application/json"})
     @GET("user/userLoginPostTest")
     Observable<UserLoginBean> userLoginPostTest(@Body UserLoginBean userLoginBean);
+
+
+
+    @POST("user/userLoginPost")
+    Observable<UserBean>  userLoginPost(@Body UserLoginBean userBean);
 }
