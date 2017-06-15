@@ -36,7 +36,6 @@
                 android:layout_marginTop="20px"
                 android:background="@drawable/algin_edit"
                 android:hint="手机号/邮箱"
-                android:text="maple1351"
                 android:textColor="@color/black"
                 android:textColorHint="@color/textColor"
                 android:textSize="20sp" />
@@ -66,7 +65,6 @@
                 android:background="@drawable/algin_edit"
                 android:hint="登录密码"
                 android:inputType="textPassword"
-                android:text="15524765003"
                 android:textColor="@color/black"
                 android:textColorHint="@color/textColor"
                 android:textSize="20sp" />

@@ -31,7 +31,7 @@ public interface RetrofitService {
     Observable<DemoModel> getDemoModel();
 
     @GET("user/userLogin")
-     Observable<UserLoginBean> userLogin(@QueryMap Map<String,String> userLoginBean);
+     Observable<UserBean> userLogin(@QueryMap Map<String,String> userLoginBean);
 
 //    @Headers({"Content-Type: application/json","Accept: application/json"})
     @GET("user/userLoginPostTest")
@@ -41,4 +41,7 @@ public interface RetrofitService {
 
     @POST("user/userLoginPost")
     Observable<UserBean>  userLoginPost(@Body UserLoginBean userBean);
+
+    @GET("user/registerUser")
+    Observable<UserBean> registerUser(@QueryMap Map<String,String> registerUser);
 }

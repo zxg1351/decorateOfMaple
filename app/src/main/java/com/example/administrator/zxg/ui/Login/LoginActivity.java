@@ -78,18 +78,18 @@ public class LoginActivity extends CommonActivity {
             ToastUtil.showShort(LoginActivity.this, getString(R.string.input_userPassword_length));
         } else {
 
-            UserLoginBean userLoginBean = new UserLoginBean();
-            userLoginBean.setUserName(etUserName);
-            userLoginBean.setUserPassword(etPassWord);
+//            UserLoginBean userLoginBean = new UserLoginBean();
+//            userLoginBean.setUserName(etUserName);
+//            userLoginBean.setUserPassword(etPassWord);
 
 //            UserBean userBean = new UserBean();
 //            userBean.setmUserAccount(etUserName);
 //            userBean.setmUserPassword(etPassWord);
 
-//            Map<String,String> parms = new HashMap<>();
-//            parms.put("userName",etUserName);
-//            parms.put("passWord",etPassWord);
-            HttpMethods.getInstance().userLoginPost(new Subscriber<UserBean>() {
+            Map<String,String> parms = new HashMap<>();
+            parms.put("userName",etUserName);
+            parms.put("userPassword",etPassWord);
+            HttpMethods.getInstance().login(new Subscriber<UserBean>() {
                 @Override
                 public void onCompleted() {
 
@@ -110,7 +110,7 @@ public class LoginActivity extends CommonActivity {
 
                 }
 
-            },userLoginBean);
+            },parms);
 
 
         }

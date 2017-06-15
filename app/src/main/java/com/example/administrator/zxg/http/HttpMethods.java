@@ -84,7 +84,7 @@ public class HttpMethods {
                 .subscribe(subscriber);
     }
 
-     public void login(Subscriber<UserLoginBean> subscriber, Map<String,String> userLoginBean){
+     public void login(Subscriber<UserBean> subscriber, Map<String,String> userLoginBean){
          retrofitService.userLogin(userLoginBean)
                  .subscribeOn(Schedulers.io())
                  .unsubscribeOn(Schedulers.io())
@@ -107,6 +107,16 @@ public class HttpMethods {
 
 
         retrofitService.userLoginPost(userBean)
+                .subscribeOn(Schedulers.io())
+                .unsubscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(subscriber);
+    }
+
+    public void registerUser (Subscriber<UserBean> subscriber,Map<String,String> userBean){
+
+
+        retrofitService.registerUser(userBean)
                 .subscribeOn(Schedulers.io())
                 .unsubscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
