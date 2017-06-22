@@ -2,8 +2,10 @@ package com.example.administrator.zxg.ui.welcome;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.support.annotation.Nullable;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
@@ -20,7 +22,7 @@ import java.util.Set;
 
 
 /**
- * Created by Administrator on 2016/9/25.
+ * Created by Administrator on] 2016/9/25.
  */
 public class WelcomeActivity extends CommonActivity {
 
@@ -30,7 +32,7 @@ public class WelcomeActivity extends CommonActivity {
             "\"time\":\"17:05\",\"isRadar\":\"1\",\"Radar\":\"JC_RADAR_AZ9010_JB\"," +
             "\"njd\":\"暂无实况\",\"qy\":\"1011\",\"rain\":\"0\"}}";
     private ImageView iv_image;
-
+    private Button sp_jump_btn;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,9 +40,20 @@ public class WelcomeActivity extends CommonActivity {
         Logger.d("执行了 onCreate");
 
         init();
+        startClock();
+        Logger.d("开始启动Clock任务");
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+    }
+
+
+
     public void init() {
+        sp_jump_btn = (Button)findViewById(R.id.sp_jump_btn);
         iv_image = (ImageView) findViewById(R.id.iv_image);
      //   String url = "http://www.qq745.com/uploads/allimg/141106/1-141106153Q5.png";
 //        String url = "http://img2.3lian.com/2014/f6/173/d/51.jpg";
@@ -49,7 +62,65 @@ public class WelcomeActivity extends CommonActivity {
 //                asBitmap(). //强制处理为bitmap
         into(iv_image);//显示到目标View中
     }
+    //由于CountDownTimer有一定的延迟，所以这里设置3400
+    private  CountDownTimer  countDownTimer = new CountDownTimer(3400, 1000) {
+        @Override
+        public void onTick(long millisUntilFinished) {
+            sp_jump_btn.setText("跳过(" + millisUntilFinished/1000 + "s)");
+        }
 
+        @Override
+        public void onFinish() {
+            sp_jump_btn.setText("跳过(" + 0 + "s)");
+            Logger.d("倒计时三秒结束,进入到跳转开始页面");
+            gotoStartActivity();
+
+        }
+
+
+    };
+
+    private void gotoStartActivity() {
+
+        countDownTimer.cancel();
+
+//        if (UserCenter.getInstance().getToken() == null) {
+        gotoNext();
+
+////        } else {
+//            gotoMainActivity();
+//        }
+
+    }
+
+    private void gotoNext(){
+        Intent intent = new Intent(WelcomeActivity.this, StartActivity.class);
+        startActivity(intent);
+        finish();
+
+    }
+
+    private void startClock() {
+        sp_jump_btn.setVisibility(View.VISIBLE);
+        countDownTimer.start();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (countDownTimer!=null){
+
+            countDownTimer.cancel();
+        }
+    }
+
+
+    public void spJest(View view){
+
+        gotoStartActivity();
+        Logger.d("手动跳转结束");
+
+    }
     public void onWelcome(View view) {
 
         Intent intent = new Intent(WelcomeActivity.this, StartActivity.class);

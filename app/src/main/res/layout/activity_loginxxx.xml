@@ -81,6 +81,7 @@
         android:gravity="center"
         android:onClick="login"
         android:text="登录"
+        android:clickable="true"
         android:textColor="@color/white"
         android:textSize="@dimen/test_size_one" />
 
@@ -100,6 +101,7 @@
             android:background="@color/coffee"
             android:gravity="center"
             android:onClick="registered"
+            android:clickable="true"
             android:text="注册"
             android:textColor="@color/black"
             android:textSize="@dimen/test_size_one" />
@@ -113,6 +115,7 @@
             android:gravity="center"
             android:onClick="forgetPassword"
             android:text="修改密码"
+            android:clickable="true"
             android:textColor="@color/black"
             android:textSize="@dimen/test_size_one"
             android:layout_weight="0.10" />
@@ -125,6 +128,7 @@
             android:gravity="center"
             android:onClick="testLogin"
             android:text="测试"
+            android:clickable="true"
             android:textColor="@color/black"
             android:textSize="@dimen/test_size_one"
             android:layout_weight="0.10" />
