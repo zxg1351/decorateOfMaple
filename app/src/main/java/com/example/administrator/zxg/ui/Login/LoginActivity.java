@@ -21,6 +21,7 @@ import com.example.administrator.zxg.ui.Glide.GlideActivity;
 import com.example.administrator.zxg.ui.SnakerbarActivity;
 import com.example.administrator.zxg.ui.TestRetrofit;
 import com.example.administrator.zxg.util.ToastUtil;
+import com.orhanobut.logger.Logger;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -102,6 +103,7 @@ public class LoginActivity extends CommonActivity {
 
                 @Override
                 public void onNext(UserBean userBean) {
+//                    Logger.json(userBean);
                     if (userBean.getResultCode().equals("0")){
                         ToastUtil.showShort(LoginActivity.this,userBean.getResultMessage()+userBean.getmUserAccount()+userBean.getmUserPassword());
                         Intent intent = new Intent(LoginActivity.this, MainActivity.class);
